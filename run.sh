@@ -11,6 +11,7 @@ xbuild /p:Configuration=Release
 cd /app
 mono ./DotNetToJScript/DotNetToJScript/bin/Release/DotNetToJScript.exe ./DotNetToJScript/ExampleAssembly/bin/Release/ExampleAssembly.dll --lang=Jscript --ver=v4 -o demo.js
 
+mkdir -p /app/ExampleAssembly/output
 tr -d '\r' < demo.js > /app/ExampleAssembly/output/demo.js
 
 echo "Output output/demo.js"
